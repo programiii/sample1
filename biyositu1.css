@@ -1,0 +1,458 @@
+:root {
+    --color-base-light: #F8F8F8; /* オフホワイト */
+    --color-base-dark: #F0F0F0;  /* ライトグレー */
+    --color-accent-pink: #D4B4C7; /* ダスティピンク */
+    --color-accent-gold: #B8860B; /* ローズゴールドのトーン */
+    --color-text-dark: #333333;
+    --color-text-light: #666666;
+    --color-white: #ffffff;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Noto Sans JP', sans-serif;
+}
+
+/* 基本設定 */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px; /* ヘッダーの高さ */
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--color-text-dark);
+    background-color: var(--color-base-light);
+    margin: 0;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-text-dark);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-accent-pink);
+}
+
+.section {
+    padding: 60px 20px;
+    position: relative;
+    overflow: hidden;
+    opacity: 0; /* 初期状態は透明 */
+    transform: translateY(30px); /* 初期状態は少し下に */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* アニメーション */
+}
+
+.section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section__inner {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section__title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 40px;
+    color: var(--color-text-dark);
+}
+
+.section__title--left {
+    text-align: left;
+}
+
+.bg-light {
+    background-color: var(--color-base-dark);
+}
+
+/* ボタン */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn--primary {
+    background-color: var(--color-accent-pink);
+    color: var(--color-white);
+}
+.btn--primary:hover {
+    background-color: #c09fb2;
+}
+
+.btn--line {
+    background-color: #06C755; /* LINEのブランドカラー */
+    color: var(--color-white);
+}
+.btn--line:hover {
+    background-color: #05a546;
+}
+
+.section__btn-wrapper {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* ヘッダー */
+.header {
+    background-color: var(--color-white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header__logo {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+}
+
+.header__nav {
+    display: none; /* モバイルでは非表示 */
+}
+
+.header__hamburger {
+    display: block; background: none; border: none; cursor: pointer; padding: 0;
+    width: 30px; height: 22px; position: relative; z-index: 101;
+}
+.header__hamburger span {
+    display: block; width: 100%; height: 3px; background-color: var(--color-text-dark);
+    border-radius: 3px; position: absolute; transition: all 0.3s ease;
+}
+.header__hamburger span:nth-child(1) { top: 0; }
+.header__hamburger span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+.header__hamburger span:nth-child(3) { bottom: 0; }
+
+/* PC表示時のヘッダーボタン配置 */
+@media (min-width: 768px) {
+    .header__reserve-btn,
+    .header__line-btn {
+        margin-left: 20px; /* ボタン間の余白 */
+    }
+}
+
+/* メインビジュアル */
+.hero {
+    position: relative;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-text-dark); /* テキスト色を濃いグレーに変更 */
+    overflow: hidden;
+}
+
+.hero__image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://colmodesign.com/wp-content/uploads/2022/11/luluca_008-900x600.jpg') no-repeat center center/cover; /* サロンのイメージ画像 */
+    filter: brightness(0.8);
+    z-index: 1;
+}
+
+.hero__message {
+    position: relative;
+    z-index: 2;
+    text-shadow: none; /* テキストシャドウを削除 */
+}
+
+.hero__title {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.hero__subtitle {
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+/* コンセプト */
+.concept__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.concept__text {
+    text-align: center;
+}
+
+.concept__image img {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* サービス・メニュー */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.service-item {
+    background-color: var(--color-white);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.service-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.service-item h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--color-accent-pink);
+    margin: 0 0 10px;
+}
+
+.service-item .price {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin-top: 15px;
+}
+
+/* スパークルエフェクト用 */
+.sparkle-particle {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8); /* 白い光 */
+    border-radius: 50%;
+    width: 8px; /* 小さな粒子 */
+    height: 8px;
+    pointer-events: none; /* クリックイベントを透過 */
+    animation: sparkle-fade-out 1s forwards; /* アニメーション */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.7); /* 輝き */
+}
+
+@keyframes sparkle-fade-out {
+    0% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0) translateY(-30px); /* 上に移動しながら消える */
+    }
+}
+
+/* スタイリスト */
+.stylist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.stylist-item {
+    text-align: center;
+}
+
+.stylist-item img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.stylist-item h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--color-text-dark);
+    margin: 0 0 10px;
+}
+
+/* ギャラリー */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+/* お客様の声 */
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.testimonial-item {
+    background-color: var(--color-white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.testimonial-author {
+    text-align: right;
+    font-weight: 700;
+    color: var(--color-text-light);
+}
+
+/* アクセス・店舗情報 */
+.access-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.access-info p {
+    margin-bottom: 10px;
+}
+
+.access-map iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* フッター */
+.footer {
+    background-color: var(--color-text-dark);
+    color: var(--color-white);
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9rem;
+}
+
+/* レスポンシブデザイン */
+@media (min-width: 768px) {
+    .section {
+        padding: 100px 40px;
+    }
+
+    .section__title {
+        font-size: 3.5rem;
+    }
+
+    .hero__title {
+        font-size: 5rem;
+    }
+
+    .hero__subtitle {
+        font-size: 1.5rem;
+    }
+
+    .header__nav {
+        display: flex;
+        align-items: center;
+    }
+
+    .header__nav-list {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .header__nav-item {
+        margin-left: 30px;
+    }
+
+    .header__reserve-btn {
+        margin-left: 30px;
+    }
+
+    .header__hamburger {
+        display: none;
+    }
+
+    .concept__content {
+        flex-direction: row;
+        gap: 60px;
+        align-items: flex-start;
+    }
+
+    .concept__text {
+        flex: 1;
+        text-align: left;
+    }
+
+    .concept__image {
+        flex: 1;
+    }
+
+    .stylist-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .access-grid {
+        flex-direction: row;
+        gap: 60px;
+        align-items: flex-start;
+    }
+
+    .access-info {
+        flex: 1;
+    }
+
+    .access-map {
+        flex: 1.5;
+    }
+}

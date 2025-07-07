@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- 基本設定 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO・SNS設定 -->
+    <!-- ★ここにご自身のサロン名や説明文を入れてください★ -->
+    <title>Salon de Grace - あなたの美しさを引き出すプライベートサロン</title>
+    <meta name="description" content="Salon de Graceは、お客様一人ひとりの個性を大切にするプライベートヘアサロンです。上質な空間で、あなただけの「美」を追求します。">
+    <meta property="og:title" content="Salon de Grace - あなたの美しさを引き出すプライベートサロン">
+    <meta property="og:description" content="洗練された技術と上質な空間で、あなたの魅力を最大限に引き出します。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com"> <!-- ★ご自身のサイトURLに書き換え★ -->
+    <meta property="og:image" content="https://example.com/ogp.jpg"> <!-- ★OGP画像のURLに書き換え★ -->
+
+    <!-- フォント (Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS・JavaScript -->
+    <link rel="stylesheet" href="biyositu1.css">
+    <script src="biyositu1.js" defer></script>
+</head>
+<body>
+
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="header__inner">
+            <a href="#" class="header__logo">Salon sample</a>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="#concept">Concept</a></li>
+                    <li class="header__nav-item"><a href="#service">Service</a></li>
+                    <li class="header__nav-item"><a href="#stylist">Stylist</a></li>
+                    <li class="header__nav-item"><a href="#gallery">Gallery</a></li>
+                    <li class="header__nav-item"><a href="#access">Access</a></li>
+                </ul>
+                <a href="#" class="btn btn--primary header__reserve-btn">ご予約</a> <!-- ★予約ページのURLに書き換え★ -->
+                <a href="https://line.me/ti/p/your_line_id" target="_blank" class="btn btn--line header__line-btn">LINE</a> <!-- ★ご自身のLINE URLに書き換え★ -->
+            </nav>
+            <button class="header__hamburger"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <main>
+        <!-- メインビジュアル -->
+        <section class="hero">
+            <div class="hero__image-wrapper"></div>
+            <div class="hero__message">
+                <h1 class="hero__title">Your Beauty, Our Passion.</h1>
+                <p class="hero__subtitle">あなたの美しさを引き出す、特別な場所。</p>
+            </div>
+        </section>
+
+        <!-- コンセプト -->
+        <section id="concept" class="section">
+            <div class="section__inner concept__content">
+                <div class="concept__text">
+                    <h2 class="section__title">Concept</h2>
+                    <p>Salon sampleは、お客様一人ひとりの「なりたい」を叶えるプライベートサロンです。経験豊富なスタイリストが、あなたの髪質や骨格、ライフスタイルに合わせた最適なスタイルをご提案します。日常を忘れ、心ゆくまでリラックスできる上質な空間で、新しい自分に出会いませんか？</p>
+                </div>
+                <div class="concept__image">
+                    <img src="https://www.whatsinc.jp/magazine/wp-content/uploads/2024/02/02-scaled.jpg" alt="サロンのコンセプトイメージ">
+                </div>
+            </div>
+        </section>
+
+        <!-- サービス・メニュー -->
+        <section id="service" class="section bg-light">
+            <div class="section__inner">
+                <h2 class="section__title">Service & Menu</h2>
+                <div class="service-grid">
+                    <div class="service-item">
+                        <img src="https://naos-salon.com/blog/wp-content/uploads/2024/03/4629848_s.jpg" alt="カット">
+                        <h3>Cut</h3>
+                        <p>お客様の骨格や髪質、ライフスタイルに合わせた再現性の高いカットをご提供します。</p>
+                        <p class="price">¥6,600〜</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEBdpMG9DWRPOmZk36XODTZoq8EG-rY3vj4A&s" alt="カラー">
+                        <h3>Color</h3>
+                        <p>トレンドカラーからグレイカラーまで、髪へのダメージを最小限に抑えた施術です。</p>
+                        <p class="price">¥8,800〜</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="https://cloudinary-a.akamaihd.net/vivivi/image/upload/t_beauty,f_auto,q_auto:good,w_800/20170126_001_03.jpg" alt="パーマ">
+                        <h3>Perm</h3>
+                        <p>柔らかな質感と持ちの良さが特徴のパーマで、朝のスタイリングも楽に。</p>
+                        <p class="price">¥11,000〜</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="https://fudge.jp/wp/wp-content/uploads/2023/09/B755AC7B-0C3D-4408-9E69-ED5CF3B68F56.jpg" alt="トリートメント">
+                        <h3>Treatment</h3>
+                        <p>髪の内部から補修し、潤いとツヤを与えるオーダーメイドトリートメント。</p>
+                        <p class="price">¥4,400〜</p>
+                    </div>
+                </div>
+                <div class="section__btn-wrapper">
+                    <a href="#" class="btn btn--primary">オンライン予約</a> <!-- ★予約ページのURLに書き換え★ -->
+                    <a href="https://line.me/ti/p/your_line_id" target="_blank" class="btn btn--line">LINEで予約</a> <!-- ★ご自身のLINE URLに書き換え★ -->
+                </div>
+            </div>
+        </section>
+
+        <!-- スタイリスト紹介 -->
+        <section id="stylist" class="section">
+            <div class="section__inner">
+                <h2 class="section__title">Stylist</h2>
+                <div class="stylist-grid">
+                    <div class="stylist-item">
+                        <img src="https://thumb.photo-ac.com/db/dbaa1d57591e4851b839634293a1bd4b_t.jpeg" alt="スタイリスト Yuka">
+                        <h3>Yuka</h3>
+                        <p>お客様の魅力を最大限に引き出す、似合わせカットが得意です。丁寧なカウンセリングで、理想のスタイルを一緒に見つけましょう。</p>
+                    </div>
+                    <div class="stylist-item">
+                        <img src="https://imgbp.hotp.jp/CSP/IMG_SRC/69/08/B205996908/B205996908.jpg?impolicy=HPB_policy_default&w=254&h=336" alt="スタイリスト Kenji">
+                        <h3>Kenji</h3>
+                        <p>トレンドを取り入れたカラーや、ダメージレスなパーマはお任せください。再現性の高いスタイルで、毎日のスタイリングを楽しくします。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ギャラリー -->
+        <section id="gallery" class="section bg-light">
+            <div class="section__inner">
+                <h2 class="section__title">Gallery</h2>
+                <div class="gallery-grid">
+                    <img src="https://d1wjnekklco6g3.cloudfront.net/c/f=webp:auto,w=256/photo/gBn5QjnPjbmUTof4H2xdXyOnX1JRTSra/1/deb261e75ce70f641cae6e986a2fda54ffaf6da2d64602dce41ae152a014d7c0.jpg" alt="スタイルギャラリー1">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsfNep1Sxrb0_T4w2Wcr9mGaHaFTFSW_NCQQ&s" alt="スタイルギャラリー2">
+                    <img src="https://lh4.googleusercontent.com/proxy/OtRZu8LAv-FYGvqi3kOxlMsnKYwtKC7y0oH3nEDqFBI8BbN2NqttBACue1sewX9IA3xuEnX7m25nfuaqFtSrz_Y" alt="スタイルギャラリー3">
+                    <img src="https://lh3.googleusercontent.com/proxy/dTxssc6hhIxTsHsiJeZjR4TGI3iyG4zi0PhNzkdQXsBd2OQJa52kSeoTw7AoWQ23Nlt5E6kCBJ7hlTrKw-9EqLc" alt="スタイルギャラリー4">
+                    <img src="https://img-mdpr.freetls.fastly.net/article/cNww/nm/cNwwbXRZbsp7ZqGX1lUZr3KjXtKYcRaEmRo47NlwNWQ.jpg?width=750&disable=upscale&auto=webp&quality=80" alt="スタイルギャラリー5">
+                    <img src="https://d1wjnekklco6g3.cloudfront.net/c/f=webp:auto,w=700/photo/dkb2RqtfxP3EIxYnRLJb0ck9LHjDpLuC/1/dbcc788c620b49645066cbcf2a1d4db9748ed615c5930acc1ecce55357dfa193.jpg" alt="スタイルギャラリー6">
+                </div>
+            </div>
+        </section>
+
+        <!-- お客様の声 -->
+        <section id="testimonials" class="section">
+            <div class="section__inner">
+                <h2 class="section__title">Testimonials</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-item">
+                        <p class="testimonial-text">「いつも理想通りの仕上がりにしてくださいます。サロンの雰囲気もとても素敵で、リラックスできる時間です。」</p>
+                        <p class="testimonial-author">30代 女性</p>
+                    </div>
+                    <div class="testimonial-item">
+                        <p class="testimonial-text">「初めての利用でしたが、丁寧なカウンセリングで安心して任せられました。周りからも好評で嬉しいです！」</p>
+                        <p class="testimonial-author">20代 女性</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- アクセス・店舗情報 -->
+        <section id="access" class="section bg-light">
+            <div class="section__inner access-grid">
+                <div class="access-info">
+                    <h2 class="section__title section__title--left">Access</h2>
+                    <p><strong>Sample</strong><br>〒150-0001 東京都渋谷区神宮前 1-2-3 Graceビル 2F</p>
+                    <p>営業時間: 10:00 - 20:00 (最終受付 19:00)<br>定休日: 火曜日</p>
+                    <p>電話番号: 098-123-4567</p>
+                    <div class="section__btn-wrapper">
+                        <a href="#" class="btn btn--primary">オンライン予約</a> <!-- ★予約ページのURLに書き換え★ -->
+                    </div>
+                </div>
+                <div class="access-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.833629986201!2d139.7056183152582!3d35.6622579801999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b66297206e1%3A0x2133999692add45!2zT21vdGVzYW5kw4QgSGlsbHM!5e0!3m2!1sja!2sjp!4v1672533300000!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <p>&copy; 2025 Sample. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
